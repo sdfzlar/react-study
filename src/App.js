@@ -5,12 +5,14 @@ import ClassComponent from './components/2-5.State/ClassComponent';
 import FunctionalComponent from './components/2-5.State/FunctionalComponent';
 import ClassComponentV2 from './components/2-6.LifeCycle/ClassComponent';
 import Event from './components/2-7.Event/Event'
+import Condition from './components/2-8.ConditionalRendering/Condition';
 
 function App() {
   return (
     <div className="App">
-      <Event />
-      {/* <ClassComponentV2 />
+      <Condition />
+      {/* <Event />
+      <ClassComponentV2 />
       <FunctionalComponent />
       <ClassComponent />
       <Composition />
