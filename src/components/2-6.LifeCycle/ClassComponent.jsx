@@ -5,7 +5,6 @@ export default class ClassComponentV2 extends Component {
     super(props);
     console.log("constructor");
     this.state = { date: new Date() };
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +26,7 @@ export default class ClassComponentV2 extends Component {
     this.setState({ date: new Date() });
   }
 
-  handleClick() {
+  handleClick = () =>  {
     alert(this.state.date);
   }
 
