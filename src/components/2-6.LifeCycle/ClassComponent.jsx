@@ -5,6 +5,7 @@ export default class ClassComponentV2 extends Component {
     super(props);
     console.log("constructor");
     this.state = { date: new Date() };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -25,11 +26,16 @@ export default class ClassComponentV2 extends Component {
     console.log("tick");
     this.setState({ date: new Date() });
   }
+
+  handleClick() {
+    alert(this.state.date);
+  }
+
   render() {
     console.log("render");
     return (
         <div>
-          <h1>Hello, Class v2!</h1>
+          <h1 onClick={this.handleClick}>Hello, Class v2!</h1>
           <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
         </div>
       );
