@@ -6,12 +6,18 @@ export default function Controlled() {
   const [essay, setEssay] = useState("Write essay");
   const [flavor, setFlavor] = useState("coconut");
 
-  function handleValueChange(event) {
-    setName(event.target.value);
-  }
+  function handleChange(event) {
+    const name = event.target.name;
 
-  function handleEssayChange(event) {
-    setEssay(event.target.value);
+    if (name === 'name') {
+        setName(event.target.value);
+    }
+    if (name === 'essay') {
+        setEssay(event.target.value);
+    }
+    if (name === 'flavor') {
+        setFlavor(event.target.value);
+    }    
   }
 
   function handleSubmit(event) {
@@ -19,24 +25,21 @@ export default function Controlled() {
     event.preventDefault();
   }
 
-  function handleFlavorChange(event) {
-    setFlavor(event.target.value);
-  }
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Name:
-        <input type="text" value={name} onChange={handleValueChange} />
+        <input name="name" type="text" value={name} onChange={handleChange} />
       </label>
       <br />
       <label>
         Essay:
-        <textarea value={essay} onChange={handleEssayChange} />
+        <textarea name="essay" value={essay} onChange={handleChange} />
       </label>
       <br />
       <label>
           Pick your favorite flavor:
-          <select value={flavor} onChange={handleFlavorChange}>
+          <select name="flavor" value={flavor} onChange={handleChange}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
