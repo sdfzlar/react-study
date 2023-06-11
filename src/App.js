@@ -11,13 +11,15 @@ import Controlled from "./components/2-10.Form/Controlled";
 import Uncontrolled from "./components/2-10.Form/Uncontrolled";
 import State from "./components/3-3.Hook/State";
 import Reducer from "./components/3-3.Hook/Reducer";
+import WelcomeDialog from "./components/3-5.Composition/WelcomeDialog";
 
 function App() {
   return (
     <div className="App">
-      <Reducer />
+      <WelcomeDialog />
+      {/* <Reducer />
       <State />
-      {/* <Controlled />
+      <Controlled />
       <Uncontrolled />
       <List />
       <Condition />
