@@ -9,14 +9,18 @@ import Condition from "./components/2-8.ConditionalRendering/Condition";
 import List from "./components/2-9.List/List";
 import Controlled from "./components/2-10.Form/Controlled";
 import Uncontrolled from "./components/2-10.Form/Uncontrolled";
+import State from "./components/3-3.Hook/State";
+import Reducer from "./components/3-3.Hook/Reducer";
 
 function App() {
   return (
     <div className="App">
-      <Controlled />
+      <Reducer />
+      <State />
+      {/* <Controlled />
       <Uncontrolled />
-      {/* <List /> */}
-      {/* <Condition />
+      <List />
+      <Condition />
       <Event />
       <ClassComponentV2 />
       <FunctionalComponent />
