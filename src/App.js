@@ -12,11 +12,12 @@ import Uncontrolled from "./components/2-10.Form/Uncontrolled";
 import State from "./components/3-3.Hook/State";
 import Reducer from "./components/3-3.Hook/Reducer";
 import WelcomeDialog from "./components/3-5.Composition/WelcomeDialog";
+import ThanksDialog from "./components/3-6.Component2/ThanksDialog";
 
 function App() {
   return (
     <div className="App">
-      <WelcomeDialog />
+      <ThanksDialog />
       {/* <Reducer />
       <State />
       <Controlled />
