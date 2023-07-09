@@ -13,12 +13,18 @@ import State from "./components/3-3.Hook/State";
 import Reducer from "./components/3-3.Hook/Reducer";
 import WelcomeDialog from "./components/3-5.Composition/WelcomeDialog";
 import ThanksDialog from "./components/3-6.Component2/ThanksDialog";
+import Button from "./components/3-7.HOC/Button";
+import Input from "./components/3-7.HOC/Input";
 
 function App() {
   return (
     <div className="App">
-      <ThanksDialog />
-      {/* <Reducer />
+      <Input />
+      <br></br>
+      <br></br>
+      <Button />
+      {/* <ThanksDialog />
+      <Reducer />
       <State />
       <Controlled />
       <Uncontrolled />
