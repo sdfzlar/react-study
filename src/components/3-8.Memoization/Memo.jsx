@@ -20,7 +20,7 @@ useEffect(() => {
                 likes: 1
             }
         ])
-    }, 1000);
+    }, 5000);
 
     return () => {
         clearInterval(interval);
