@@ -1,4 +1,4 @@
-import React, { memo, Profiler, useState } from 'react'
+import React, { memo, Profiler, useState, useMemo } from 'react'
 import './CommentItem.css'
 
 
@@ -24,10 +24,10 @@ function CommentItem({title, content, likes, onClick}) {
       alert(`${title} 눌림`);
     };
 
-    const rate = () => {
+    const rate = useMemo(() => { // 특정 값을 memoization
       console.log("rate check");
       return likes > 10 ? "Good" : "Bad";
-    };
+    }, [likes]);
 
     return (
     <Profiler id="CommentItem" onRender={onRenderCallback}>
@@ -38,7 +38,7 @@ function CommentItem({title, content, likes, onClick}) {
         <br />
         <span>{likes}</span>
         <br />
-        <span>{rate()}</span>
+        <span>{rate}</span>
         <br />
         <span>{clickCount}</span>
         </div>

@@ -3,7 +3,7 @@ import CommentItem from './CommentItem';
 
 
 export default function Comments({commentList}) {
-    const handleClick = useCallback(() => {
+    const handleClick = useCallback(() => { // 특정 함수를 memoization
         console.log('눌림');
     }, []);
   return (
