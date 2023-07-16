@@ -17,12 +17,14 @@ import Button from "./components/3-7.HOC/Button";
 import Input from "./components/3-7.HOC/Input";
 import Memo from "./components/3-8.Memoization/Memo";
 import Example from "./components/3-10.Context/Example";
+import PortalExample from "./components/3-11.Portal/PortalExample";
 
 function App() {
   return (
     <div className="App">
-      <Example />
-      {/* <Memo />
+      <PortalExample />
+      {/* <Example />
+      <Memo />
       <Input />
       <Button />
       <ThanksDialog />
